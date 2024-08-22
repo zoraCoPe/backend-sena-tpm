@@ -1,0 +1,83 @@
+###
+POST http://localhost:9000/api/profesionalessalud/ HTTP/1.1
+content-type: application/json
+
+{
+ "especialidad": "AlergiasAlimentcias",
+ "sexo": "femenino",
+ "experiencia": "40"  
+}
+ 
+###
+POST http://localhost:9000/api/personas/ HTTP/1.1
+content-type: application/json
+
+{
+"name": "Jhon",
+"apellido": "Puentes",
+"id": 2309890,
+"email": "jhpuen34@gmail.com",
+"direccion": "calle 5 #56-9",
+"telefono": 432678084
+
+} 
+###
+POST http://localhost:9000/api/personas/login HTTP/1.1
+content-type: application/json
+
+{
+"username": "sebasti98@gmail.com",
+"password":"202020"
+}  
+###
+POST http://localhost:9000/api/pacientes/ HTTP/1.1
+content-type:application/json
+
+{
+  "fechaDeNacimiento": "1996-09-03T00:00:00.000Z",
+        "edad": "29",
+        "pesoInicial": 62.9,
+        "pesoActual": 61.45,
+        "estatura": 1.6,
+        "indiceMasaCorporal": 29   
+}
+// cuando cree otro usuario no olvide click send Request arriba
+
+// continuo lo del user.routes del get
+
+###
+
+GET http://localhost:9000/api/personas HTTP/1.1
+ 
+
+// con el GET digo traiganme la base de datos
+// para ver solo un usuario especifico agrego al get el id del usuario 66ada12ddb9867e541fa8a98
+
+###
+GET http://localhost:9000/api/profesionalessalud HTTP/1.1
+ 
+###
+GET http://localhost:9000/api/pacientes/ HTTP/1.1
+ 
+//para corregr errores en los datos name correo etc uso PUT coloco el id 66ada12ddb9867e541fa8a98 al que le quiero hacer cambios
+###
+
+PUT http://localhost:9000/api/personas/ HTTP/1.1  
+content-type:application/json
+
+###
+PUT http://localhost:9000/api/profesionalsalud/66b6e3c3b9de0e37cfb9da6ad/ HTTP/1.1
+content-type:application/json
+###
+PUT http://localhost:9000/api/pacientes/ HTTP/1.1
+content-type:application/json
+
+// para eliminar un usuario usamos el delete
+###
+DELETE http://localhost:9000/api/personas/ HTTP/1.1
+
+
+###
+DELETE http://localhost:9000/api/profesionalsalud/ HTTP/1.1
+###
+DELETE http://localhost:9000/api/paciente/ HTTP/1.1
