@@ -1,5 +1,5 @@
 const express = require("express");
-
+const cors=require("cors");
 const app = express();
 
 const mongoose = require("mongoose");
@@ -21,6 +21,7 @@ app.listen(port,() => console.log("servidor ok",port));
 
 //middleware
 app.use(express.json());
+app.use(cors())
 app.use("/api", userRoutes);
 app.use("/api", personasRoutes);
 app.use("/api", profesionalessaludRoutes);

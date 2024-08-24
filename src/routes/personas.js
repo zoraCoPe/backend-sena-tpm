@@ -54,6 +54,7 @@ router.get("/personas",(req, res) => {
  });
  router.post("/personas/login",async(req, res)=>{   // CREO LA  RUTA para INGRESAR el password
   const {username,password} = req.body;
+  console.log(username,password)
   const usuariodb= await personasSchema.
   findOne({email:username}).select("+password") //traiga el usuario pero incluya la contraseña
   .exec();
